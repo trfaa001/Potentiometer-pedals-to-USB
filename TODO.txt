@@ -1,0 +1,9 @@
+1. Store the kernel so it doesnt need to be recalculated each time. Can be done by storing in EEPROM and only recalculating the params are changed. or make it so you need to manually need to change the kernel when wanted (the code still calculates it, but you need to move the kernel to inside the code yourself)
+
+2. Make kernelSize - 1 a constant variable to save calculation time
+
+3. A debug option, returning all data ()
+
+4. Reporting of cycle time (option in the code)
+
+5. Making a GUI with acces to the params and visualisation of data
