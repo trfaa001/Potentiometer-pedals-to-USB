@@ -45,7 +45,6 @@ float filterOutputPedal3[5]; // The output of the filter from pedal 3
 
 float kernelSum = 0; 
 
-
 // Constant variables for logic
 const int amountOfReadingsForMax = 10;
 const int millisForMinCalibration = 1000; // The time for taking the average of the "minimum" value of each pedal
@@ -55,6 +54,7 @@ const int kernelSize = 5; // Variables for Guassian kernel
 const float sigma = 2.0; // Standard deviation
 
 void setup() {
+  // Define pin modes
   pinMode(pedal1, INPUT);
   pinMode(pedal2, INPUT);
   pinMode(pedal3, INPUT);
@@ -77,6 +77,7 @@ void setup() {
 
 void loop() {
 
+  // If enough time has passed check if the pedals can reach a higher value
   if ((millis() - timeLastMaxCalibration) > timeBetweenMaxCalibration){
       pedal1Max = maxCalibration(1, pedal1Max);
       pedal2Max = maxCalibration(2, pedal2Max);
@@ -169,6 +170,7 @@ void takeInputs(){
   }
 }
 
+//Calculate the gaussian kernel. Could make the code faster by making this only run when sigma is changed
 void gaussianKernel() {
   kernelSum = 0;
 
@@ -183,6 +185,8 @@ void gaussianKernel() {
 }
 
 void convolve1d(float* data, float* kernel, float* output, int size) {
+  //Convolves
+
   int halfSize = size / 2;
 
   for (int i = 0; i < size; i++) {
