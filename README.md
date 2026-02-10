@@ -1,11 +1,10 @@
 # DIY USB Game Pedals with Arduino & Logitech G29 Wiring
 
-This project turns **three potentiometers** into fully functional USB game pedals (clutch, brake, accelerator) using an Arduino and the [Arduino Joystick Library](https://github.com/MHeironimus/ArduinoJoystickLibrary).  
-It includes **Gaussian smoothing** for stable input, **auto-calibration** for min/max pedal travel, and an example **KiCad wiring diagram** for connecting Logitech G29 pedals.
+This project turns **three potentiometers** into fully functional USB game pedals (clutch, brake, accelerator) using an Arduino and the [Arduino Joystick Library](https://github.com/MHeironimus/ArduinoJoystickLibrary).
 
 ---
 
-## ✨ Features
+## Features
 
 - **3 Analog Pedals** mapped to USB joystick axes:
   - **Rx** → Pedal 1 (e.g., Clutch)
@@ -18,18 +17,17 @@ It includes **Gaussian smoothing** for stable input, **auto-calibration** for mi
 
 ---
 
-## 🛠 Hardware Requirements
+## Hardware Requirements
 
-- **Arduino Leonardo**, Micro, or any board with native USB HID support  
+- **Arduino Leonardo**, Micro, or any board with native USB HID support (only tested on Leonardo)  
   *(Uno/Nano will not work without extra firmware flashing)*
 - **3x potentiometers** (e.g., from Logitech G29 pedals)
 - **Wiring** (Dupont cables or soldered connections)
-- **PC with USB port**
-- *(Optional)* Logitech G29 pedal set for reuse
+- *(Optional)* Capacitors for physical low-pass filter.
 
 ---
 
-## 📐 Wiring
+## Wiring
 
 The potentiometers are connected to the Arduino’s analog pins:
 
@@ -45,7 +43,7 @@ If using Logitech G29 pedals, refer to the included [**KiCad schematic**](/hardw
 
 ---
 
-## 💻 Software Setup
+## Software Setup
 
 1. **Install Arduino IDE**
 2. **Install Joystick Library**  
@@ -58,7 +56,7 @@ If using Logitech G29 pedals, refer to the included [**KiCad schematic**](/hardw
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ### Gaussian Smoothing
 The code uses a **5-point Gaussian kernel** to smooth pedal readings:
