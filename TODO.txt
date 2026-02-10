@@ -7,3 +7,5 @@
 4. Reporting of cycle time (option in the code)
 
 5. Making a GUI with acces to the params and visualisation of data
+
+6. 3D printed enclosure for arduino Leonardo with a RS232 connector.
