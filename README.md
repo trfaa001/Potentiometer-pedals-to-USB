@@ -41,7 +41,7 @@ The potentiometers are connected to the Arduino’s analog pins:
 
 Each potentiometer also connects to **5V** and **GND**.
 
-If using Logitech G29 pedals, refer to the included **KiCad schematic** for the correct pinout.
+If using Logitech G29 pedals, refer to the included [**KiCad schematic**](/hardware/kicad/g29pedals/schematic.jpg) for the correct pinout.
 
 ---
 
