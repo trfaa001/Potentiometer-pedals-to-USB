@@ -55,11 +55,3 @@ If using Logitech G29 pedals, refer to the included [**KiCad schematic**](/hardw
    - Flash the provided `.ino` file to your Arduino
 
 ---
-
-## How It Works
-
-### Gaussian Smoothing
-The code uses a **5-point Gaussian kernel** to smooth pedal readings:
-
-```cpp
-kernel[i] = exp(-(pow(x, 2)) / (2 * pow(sigma, 2)));
