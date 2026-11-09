@@ -13,13 +13,13 @@ This project turns **three potentiometers** into fully functional USB game pedal
 - **Gaussian smoothing filter** to reduce noise and jitter
 - **Automatic min/max calibration** at startup and during use
 - **Compatible with Logitech G29 pedal wiring** (KiCad schematic included)
-- **Plug-and-play USB HID device** — no drivers needed on Windows
+- **Plug-and-play USB HID device**
 
 ---
 
 ## Hardware Requirements
 
-- **Arduino Leonardo**, Micro, or any board with native USB HID support (only tested on Leonardo)  
+- **Arduino Leonardo**, Micro, or any Arduino board with native USB HID support (only tested on Leonardo)  
   *(Uno/Nano will not work without extra firmware flashing)*
 - **3x potentiometers** (e.g., from Logitech G29 pedals)
 - **Wiring** (Dupont cables or soldered connections)
